@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab rent</title>
+    <link rel="stylesheet" href="rent.js">
+
+    <style>
+        /* Add your CSS styles here */
+        /* Add your CSS styles here */
+/* You can style the elements to resemble your Swing application */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.form-container {
+    border: 5px solid #ccc;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 400px; /* Adjust width as needed */
+    background-color: #fff;
+}
+
+.menu-container {
+    text-align: center;
+    margin-top: 50px; /* Add margin for better layout */
+}
+
+.menu-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-container button:hover {
+    background-color: #0056b3;
+}
+
+.form-container input[type="text"],
+.form-container select {
+    width: calc(100% - 20px); /* Adjust width as needed */
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+.history-container {
+    margin-top: 20px;
+}
+
+.history-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history-container ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.history-container ul li:last-child {
+    margin-bottom: 0;
+}
+
+        /* You can style the elements to resemble your Swing application */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .form-container {
+            display: none; /* Hide form container by default */
+        }
+
+        .menu-container {
+            text-align: center;
+            margin-top: 50px; /* Add margin for better layout */
+        }
+
+        .menu-container button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container{
+            border: 5px solid #ccc;
+            margin: 50px;
+            padding: 10px 20px;
+        }
+        .form-container{
+            text-align: center;
+        }
+        .form-container input{
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            background: #f0f0f0;
+            
+        }
+        .form-control border-0{
+            background-color: #f0f0f0;
+        }
+
+        .menu-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainMenu" class="menu-container">
+        <h2>Main Menu</h2>
+        <button onclick="bookRide()">Rent a car</button>
+        <!-- <button onclick="viewHistory()">View Rental History</button> -->
+    </div>
+<!-- 
+        <h2>Ride Booking</h2>
+
+        <p>Select Source:</p>
+        <select id="sourceComboBox">
+            <option value="Source 1">Source 1</option>
+            <option value="Source 2">Source 2</option>
+        </select>
+
+        <p>Select Destination:</p>
+        <select id="destinationComboBox">
+            <option value="Destination 1">Destination 1</option>
+            <option value="Destination 2">Destination 2</option>
+        </select>
+
+        <p>Select Vehicle:</p>
+        <select id="vehicleComboBox">
+            <option value="Vehicle 1">Vehicle 1</option>
+            <option value="Vehicle 2">Vehicle 2</option>
+        </select>
+
+        <p>Select Variant:</p>
+        <select id="variantComboBox">
+            <option value="Variant 1">Variant 1</option>
+            <option value="Variant 2">Variant 2</option>
+        </select>
+
+        <p>Enter Time:</p>
+        <input type="text" id="timeField">
+
+        <button onclick="confirmBooking()">Confirm Booking</button> -->
+
+    <div id="bookRideForm" class="form-container">
+        <h2>Book a Ride</h2>
+        Form for booking a ride goes here 
+        <form action="submit" class="" method="post">
+            <div >
+                <h2>STARTING PLACE</h2>
+                <select id="sourceComboBox">
+                    <option value="Kottapalli ">Kottapalli</option>
+                    <option value="India ">India</option>
+                    <option value="Vemalwada">Vemalwada</option>
+                    <option value="Peddapalli">Peddapalli</option>
+                </select>
+            </div>
+            <div  >
+                <h2>DESTINATION</h2>
+                <select id="destinationComboBox">
+                    <option value="Sirsilla ">Sirsilla</option>
+                    <option value="Jagtial">Jagtial</option>
+                    <option value="Siddipet">Siddipet</option>
+                    <option value="Lakshettipet">Lakshettipet</option>
+                </select>
+            </div>
+            <div  >
+                <h2>VECHILE</h2>
+                <select id="vehicleComboBox">
+                    <option value="BMW">BMW</option>
+                    <option value="TATA">TATA</option>
+                    <option value="MARUTHI">MARUTHI</option>
+                </select>
+            </div>
+            <div >
+                <h2>VARIANT</h2>
+                <select  id="variantComboBox">
+                    <option value="4 SEATER">4 SEATER</option>
+                    <option value="7 SEATER">7 SEATER</option>
+                    <option value="9 SEATER">9 SEATER</option>
+                </select>
+            </div>
+            <div >
+                <h2>TIME</h2>
+                <select id="timeField">
+                    <option value="9:00AM-12:00AM">9:00AM-12:00AM</option>
+                </select>
+            </div>
+            <button onclick="confirmBooking()">Confirm Booking</button>
+            <!-- <button onclick="viewHistory()">viewHistoy Booking</button> -->
+
+
+            <div>
+
+                <button onclick="sudmit()">sudmit</button>
+                <link rel="stylesheet" href="rent.html">
+            </div>
+            
+
+         </form>
+    </div> 
+
+    <div id="bookingHistoryList" class="history-container" > -->
+         <!-- <form action="display">
+            <button id="bookingHistoryList"> history</button>
+        </form> -->
+        <!-- Booking history display goes here -->
+        
+    </div>
+
+    <!-- <p>Enter Time:</p>
+    <input type="text" id="timeField"> -->
+
+
+<script>
+    function confirmBooking() {
+        var selectedSource = document.getElementById("sourceComboBox").value;
+        var selectedDestination = document.getElementById("destinationComboBox").value;
+        var selectedVehicle = document.getElementById("vehicleComboBox").value;
+        var selectedVariant = document.getElementById("variantComboBox").value;
+        var selectedTime = document.getElementById("timeField").value;
+
+        var price = Math.random() * 1000; // Assuming generateRandomPrice() generates a random price
+
+        var confirmation = confirm(
+            "Source: " + selectedSource + "\n" +
+            "Destination: " + selectedDestination + "\n" +
+            "Vehicle: " + selectedVehicle + "\n" +
+            "Variant: " + selectedVariant + "\n" +
+            "Time: " + selectedTime + "\n" +
+            "Price: ₹" + price.toFixed(2) + "\n" +
+            "Confirm booking?"
+            
+        );
+        alert("Car Rent confirmed successfully!");
+
+
+        if (confirmation) {
+            var bookingDetails = "Source: " + selectedSource + "\n" +
+            "Destination: " + selectedDestination + "\n" +
+            "Vehicle: " + selectedVehicle + "\n" +
+            "Variant: " + selectedVariant + "\n" +
+            "Time: " + selectedTime + "\n" +
+            "Price: ₹" + price.toFixed(2);
+
+        if (typeof bookingHistory === 'undefined') {
+            var bookingHistory = []; // Create bookingHistory array if not already defined
+        }
+
+        bookingHistory.push(bookingDetails);
+        console.log("Booking successful\n" + bookingDetails); // Log success message to console for debugging
+        alert("Booking successful!\n" + bookingDetails); // Uncomment this line if you want to use the alert
+        alert("View History\n" + bookingDetails);
+        // window.location.href = 'book.html';
+
+         // Uncomment this line if you want to use the alert
+        function viewHistory() {
+            var historyString = "Booking History:\n";
+            for (var i = 0; i < bookingHistory.length; i++) {
+                historyString += (i + 1) + ". " + bookingHistory[i] + "\n";
+            }
+                alert(historyString);
+        }
+        
+
+        // Additional logic to close the window or redirect can be added here
+        } else {
+            console.log("Booking canceled."); // Log cancellation message to console for debugging
+        }
+            displayBookingHistory(bookingDetails);
+            function displayBookingHistory(bookingDetails) {
+            var bookingHistoryList = document.getElementById("bookingHistoryList");
+            var listItem = document.createElement("li");
+            listItem.textContent = bookingDetails;
+            bookingHistoryList.appendChild(listItem);
+        }
+
+    }
+    // chatbot
+    // Function to view rental history
+    
+    function viewHistory() {
+            document.getElementById("mainMenu").style.display = "none";
+            document.getElementById("bookingHistoryList").style.display = "block";
+            
+            displayBookingHistory();
+            
+
+            bookingHistory.push(bookingDetails);
+            console.log(bookingDetails); // Log success message to console for debugging
+            alert(bookingDetails);
+            if (confirmation) {
+            var bookingDetails = "Source: " + selectedSource + "\n" +
+            "Destination: " + selectedDestination + "\n" +
+            "Vehicle: " + selectedVehicle + "\n" +
+            "Variant: " + selectedVariant + "\n" +
+            "Time: " + selectedTime + "\n" +
+            "Price: ₹" + price.toFixed(2);
+        }
+    }
+    
+
+</script>
+
+
+    <script>
+        // Function to display the book ride form and hide other elements
+        function bookRide() {
+           
+            document.getElementById("mainMenu").style.display = "none";
+            document.getElementById("bookRideForm").style.display = "block";
+            // Optionally, you can show a message here indicating the successful rental
+            
+        }
+        function sudmit() {
+            
+            document.getElementById("mainMenu").style.display = "none";
+            document.getElementById("bookRideForm").style.display = "block";
+            
+            
+            var startingPlace = document.getElementById("startingPlace").value;
+            var destination = document.getElementById("destination").value;
+            var variant = document.getElementById("variant").value;
+            var time = document.getElementById("time").value;
+
+            if (startingPlace === " " || destination === " " || variant === " " || time === " ") {
+                alert("Please fill all the options.");
+                return false; // Prevent form submission
+            }
+            else{
+                alert("Car Rent successfully!");
+                
+                window.location.href = 'rent.html';
+                return true;
+            }
+            alert("Car Rented successfully!");
+            window.location.href = 'rent.html';
+           // return true; // Allow form submission
+        
+        }
+        
+
+        
+    </script>
+</body>
+</html>

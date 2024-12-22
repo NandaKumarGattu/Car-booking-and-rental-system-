@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Topbar Styles */
+.topbar {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.topbar .info {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .info small {
+    margin-right: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand h2 {
+    margin: 0;
+    color: #007bff;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+/* Form Styles */
+.form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.tab-group li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.tab-group li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    text-decoration: none;
+}
+
+.tab-group li.active a {
+    background-color: #0056b3;
+}
+
+.tab-content {
+    padding: 20px 0;
+}
+
+.field-wrap {
+    margin-bottom: 15px;
+}
+
+.field-wrap label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.field-wrap input[type="text"],
+.field-wrap input[type="email"],
+.field-wrap input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-block {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-block:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer-menu a {
+    margin-right: 10px;
+    color: #fff;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,207 @@
+/* Topbar styles */
+.container-fluid.bg-light {
+    background-color: #fff; /* Light gray background */
+    padding: 0;
+}
+
+.row.gx-0.d-none.d-lg-flex {
+    display: flex;
+}
+
+.col-lg-7.px-5.text-start,
+.col-lg-5.px-5.text-end {
+    padding: 0 2rem; /* Horizontal padding */
+}
+
+/* Topbar item styles */
+.small {
+    font-size: 0.75rem; /* Small font size */
+}
+
+.fa {
+    font-size: 0.875rem; /* Font Awesome icon size */
+    margin-right: 0.5rem; /* Spacing between icon and text */
+}
+
+.py-3 {
+    padding-top: 0.75rem; /* Vertical padding */
+    padding-bottom: 0.75rem;
+}
+
+.h-100 {
+    height: 100%; /* Height 100% */
+}
+
+.d-inline-flex {
+    display: inline-flex; /* Display as inline flex */
+    align-items: center; /* Center vertically */
+}
+
+.align-items-center {
+    align-items: center; /* Center vertically */
+}
+
+.text-start {
+    text-align: center; /* Align text to the start (left for LTR languages) */
+}
+
+.text-end {
+    text-align: end; /* Align text to the end (right for LTR languages) */
+}
+
+.btn.btn-sm-square {
+    padding: 0.5rem 0.75rem; /* Button padding */
+    border-radius: 0.25rem; /* Button border radius */
+    background-color: #fff; /* Button background color */
+    color: #007bff; /* Button text color */
+    margin-right: 0.25rem; /* Spacing between buttons */
+}
+
+.bg-white {
+    background-color: #fff; /* White background */
+}
+
+.text-primary {
+    color: #007bff; /* Primary text color */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 991.98px) {
+    .col-lg-7.px-5.text-start,
+    .col-lg-5.px-5.text-end {
+        padding: 0; /* Reset padding */
+    }
+}
+/* Margin Bottom */
+.mb-5 {
+    margin-bottom: 3rem;
+}
+/* CSS for Footer */
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+}
+
+.footer a {
+    color: #fff; /* White color for links */
+}
+
+.footer a:hover {
+    color: #ccc; /* Light gray color on hover for links */
+}
+
+.container text-center{
+    color: #fff;
+    align-items: center;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 270px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+

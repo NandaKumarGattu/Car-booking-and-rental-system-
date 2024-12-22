@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 200px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}

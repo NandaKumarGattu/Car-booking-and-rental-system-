@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="registration.css">
+
+<title>Registration and Login</title>
+<style>
+    .error {
+        color: red;
+    }
+
+    /* registration.css */
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    
+</style>
+</head>
+<body>
+
+<h2>Registration</h2>
+<form id="registrationForm">
+    <div>
+        <label for="regUsername">Username:</label>
+        <input type="text" id="regUsername" name="regUsername">
+        <span id="usernameError" class="error"></span>
+    </div>
+    <div>
+        <label for="regPassword">Password:</label>
+        <input type="password" id="regPassword" name="regPassword">
+        <span id="passwordError" class="error"></span>
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+<h2>Login</h2>
+<form id="loginForm">
+    <div>
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" name="loginUsername">
+        <span id="loginUsernameError" class="error"></span>
+    </div>
+    <div>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="loginPassword">
+        <span id="loginPasswordError" class="error"></span>
+    </div>
+    
+    <button type="sudmit" >Login</button>
+
+    
+</form>
+
+<script>
+    // Registration and Login Validation
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var regUsername = document.getElementById('regUsername').value;
+        var regPassword = document.getElementById('regPassword').value;
+        var usernameError = document.getElementById('usernameError');
+        var passwordError = document.getElementById('passwordError');
+        
+        // Simple validation
+        if (!regUsername) {
+            usernameError.textContent = 'Username is required';
+            return;
+        }
+        if (!regPassword) {
+            passwordError.textContent = 'Password is required';
+            return;
+        }
+        
+        // Clear error messages
+        usernameError.textContent = '';
+        passwordError.textContent = '';
+
+        // Store username and password in localStorage
+        localStorage.setItem('username', regUsername);
+        localStorage.setItem('password', regPassword);
+
+        alert('Registration successful!');
+        document.getElementById('registrationForm').reset();
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var loginUsername = document.getElementById('loginUsername').value;
+        var loginPassword = document.getElementById('loginPassword').value;
+        var loginUsernameError = document.getElementById('loginUsernameError');
+        var loginPasswordError = document.getElementById('loginPasswordError');
+
+        // Retrieve stored username and password
+        var storedUsername = localStorage.getItem('username');
+        var storedPassword = localStorage.getItem('password');
+
+        // Simple validation
+        if (loginUsername !== storedUsername || loginPassword !== storedPassword) {
+            loginUsernameError.textContent = 'Invalid username or password';
+            return;
+        }
+
+        // Clear error message
+        loginUsernameError.textContent = '';
+
+        alert('Login successful!');
+        setTimeout(function() {
+            window.location.href = "booking.html";
+        }, 1000);
+
+
+        document.getElementById('loginForm').reset();
+
+    });
+</script>
+
+</body>
+</html>
